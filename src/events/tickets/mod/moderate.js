@@ -56,7 +56,12 @@ module.exports.run = async (interaction) => {
                 new MessageButton()
                     .setStyle("DANGER")
                     .setLabel("Delete")
-                    .setCustomId("delete-ticket")
+                    .setCustomId("delete-ticket"),
+
+                new MessageButton()
+                    .setStyle("SECONDARY")
+                    .setEmoji("🗑️")
+                    .setCustomId("delete-button")
             );
 
             const embed = new MessageEmbed()
