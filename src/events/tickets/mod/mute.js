@@ -76,6 +76,8 @@ module.exports.run = async (interaction) => {
             // check if interaction.user has admin permissions
             if (!interaction.member.permissions.has("MANAGE_CHANNELS")) return interaction.reply({ content: `You are not allowed to do that`, ephemeral: true, });
 
+            if (member.permissions.has("SEND_MESSAGES")) return interaction.reply({ content: `The ticket is already resumed`, ephemeral: true, });
+
             if (buttonCooldown.has(interaction.user.id)) return interaction.reply({ content: "You are on cooldown", ephemeral: true });
             buttonCooldown.add(interaction.user.id)
             setTimeout(() => buttonCooldown.delete(interaction.user.id), 120_000)
