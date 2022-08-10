@@ -5,8 +5,8 @@ const { getKeyByValue, msToMinAndSec } = require("../util/util.js");
 const { red } = require("colors/safe");
 
 // Configs
-const config = require("../../Controller/config.js");
-const emojis = require("../../Controller/emojis/emojis");
+const config = require("../../Controller/config.json");
+const emojis = require("../../Controller//emojis/emojis");
 
 module.exports.data = {
   name: "interactionCreate",
